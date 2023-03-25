@@ -1,0 +1,19 @@
+<form action="" method="post">
+   </form>{% extends 'signup.html' %}
+{% load static %}
+{% block form %}
+<form action="" method="post">
+
+    {% csrf_token %} 
+    <h3>Login Here</h3>
+    <label class="mb-2 mt-2" for="username">Username</label>
+    <input type="text" placeholder="Enter Username" id="username" name="username">
+
+    <label class="mb-2 mt-2" for="password">Password</label>
+    <input type="password" placeholder="Password" id="password" name="pass">
+
+    <button type="submit" class="mb-4">Log In</button>
+    <a href="{% url 'signup' %}" >Create a account</a>
+
+   </form>
+{% endblock form %}
